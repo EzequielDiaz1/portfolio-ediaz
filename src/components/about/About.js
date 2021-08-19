@@ -59,20 +59,22 @@ const About = () => {
                     ></button>
                   </div>
                   <div class="modal-body">
-                    <img src="https://lh3.googleusercontent.com/proxy/Ip3G-Ez_VP6PYx8-m80BKAPIaZRQpatSfp7CnwkUEN6nR6CNrFBzzH0Q3OdktCtDGEJj4CqVcnfSV_lXJaADtrGoFFcAtZBsqQ"></img>
-                    <img src="https://davidrengifo.files.wordpress.com/2017/08/nodejs_logo.png"></img>
-                    <img src="https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_256/https://itsolution24x7.com/blog/wp-content/uploads/2020/06/express.png"></img>
-                    <img src="https://justcodeit.io/wp-content/uploads/Git_icon.svg_.png"></img>
-                    <img src="https://cdn.iconscout.com/icon/free/png-256/html5-40-1175193.png"></img>
-                    <img src="https://blastcoding.com/wp-content/uploads/2018/10/CSS3.png"></img>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnPW1xPjnjrv6kSXFMWpGNZbmDEXzNCa3Fvou114yxt-UFCS0OCwACWcPWR9SPIRULEJc&usqp=CAU"></img>
-                    <img src="https://4.bp.blogspot.com/-_YSVTe2ekBU/XKMntJDH0ZI/AAAAAAAAXNk/3d48i_XShWwvoMNj0YJWp2J4_Woh9dzGgCLcBGAs/s1600/reactjs%2Btutorial.png"></img>
-                    <img src="https://design.bkool.com/images/components/figma-symbol.png"></img>
-                    <img src="https://miro.medium.com/max/256/1*7Mh2Gq542qUfMlx6iTgE2Q.png"></img>
-                    <img src="https://www.buenosaires.gob.ar/sites/gcaba/files/vuejs.png"></img>
-                    <img src="https://i.pinimg.com/originals/22/7d/36/227d362950c4a6162452fd801984bb51.png"></img>
-                    <img src="https://es-wiki.ikoula.com/images/a/a3/Postgre.png"></img>
-                    <img src="https://www.am-design.es/Content/img/Bootstrap1.png"></img>
+                    <img src= "nodejs_logo.png" />
+                    <img src= "reactjs_tutorial.png" />
+                    <img src= "redux.png"/>
+                    <img src= "vuejs.png" />
+                    <img src= "jest.jpg" />
+                    <img src= "Git_icon.svg_.png" />
+                    <img src= "html5-40-1175193.png" />  
+                    <img src= "CSS3.png" />
+                    <img src= "Bootstrap1.png" />
+                    <img src= "figma-symbol.png" />
+                    <img src= "postman.png" />
+                    <img src= "images.jpg" />
+                    <img src= "mysql.png" />
+                    <img src= "mongodb-logo.png"/>
+
+
                   </div>
                 </div>
               </div>
@@ -106,7 +108,9 @@ const About = () => {
                     ></button>
                   </div>
                   <div class="modal-body">
-                    <p>Que me importa</p>
+                    <div class="">
+
+                    </div>
                   </div>
                 </div>
               </div>
