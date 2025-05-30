@@ -1,0 +1,42 @@
+# Robots.txt para ezequieldiaz.dev
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://ezequieldiaz.dev/sitemap.xml
+
+# Crawl-delay para ser amigable con los bots
+Crawl-delay: 1
+
+# Bloquear archivos innecesarios
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+Disallow: *.json$
+
+# Permitir específicamente archivos importantes
+Allow: /favicon.ico
+Allow: /robots.txt
+Allow: /sitemap.xml
+Allow: /manifest.json
+
+# Google específico
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Bing específico  
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Social Media Crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
