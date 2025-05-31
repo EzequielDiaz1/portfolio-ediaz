@@ -1,10 +1,11 @@
 "use client";
 import { motion } from "framer-motion";
-import { ArrowRight, ExternalLink, Github, ChevronDown } from "lucide-react";
+import { ArrowRight, ExternalLink, Github, ChevronDown, Smile } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import React from "react";
+import * as Tooltip from "@radix-ui/react-tooltip";
 
 interface Project {
   title: string;
@@ -13,6 +14,8 @@ interface Project {
   type: string;
   features: string[];
   tech: string[];
+  demoUrl: string;
+  repoUrl: string;
 }
 
 interface ProjectsSectionProps {
@@ -59,7 +62,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ projects, scrollToSec
                     alt={`Captura de pantalla del proyecto ${project.title}`}
                     width={600}
                     height={400}
-                    className="w-full h-64 object-cover"
+                    className="w-full h-64 object-contain"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent" />
                   <div className="absolute top-4 right-4">
@@ -102,14 +105,26 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ projects, scrollToSec
                 </div>
               </div>
               <div className="flex gap-4">
-                <Button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600" aria-label={`Ver demo del proyecto ${project.title}`}>
+                <Button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600" aria-label={`Ver demo del proyecto ${project.title}`} onClick={() => window.open(project.demoUrl, "_blank")}>
                   <ExternalLink className="mr-2 h-4 w-4" />
                   Ver demo
                 </Button>
-                <Button variant="outline" className="border-purple-500/50 text-purple-300 hover:bg-purple-500/10" aria-label={`Ver código del proyecto ${project.title} en GitHub`}>
-                  <Github className="mr-2 h-4 w-4" />
-                  Código
-                </Button>
+                <Tooltip.Provider delayDuration={200}>
+                  <Tooltip.Root>
+                    <Tooltip.Trigger asChild>
+                      <Button variant="outline" className="border-purple-500/50 text-purple-300 hover:bg-purple-500/10" aria-label={`Ver código del proyecto ${project.title} en GitHub`} onClick={() => window.open(project.repoUrl, "_blank")}>
+                        <Github className="mr-2 h-4 w-4" />
+                        Código
+                      </Button>
+                    </Tooltip.Trigger>
+                    <Tooltip.Portal>
+                      <Tooltip.Content side="top" align="center" className="z-50 select-none rounded-lg bg-slate-900/90 px-4 py-2 text-sm text-purple-200 shadow-lg border border-purple-500/30 backdrop-blur-md">
+                        Vas a tener que pedirme permiso, porqué es privado <Smile className="inline ml-1 mb-0.5 text-yellow-300" size={18} />
+                        <Tooltip.Arrow className="fill-purple-500/30" />
+                      </Tooltip.Content>
+                    </Tooltip.Portal>
+                  </Tooltip.Root>
+                </Tooltip.Provider>
               </div>
             </div>
           </motion.div>

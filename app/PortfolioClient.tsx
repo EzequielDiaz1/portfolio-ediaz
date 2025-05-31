@@ -10,6 +10,7 @@ import {
   Phone,
   ChevronUp,
   ChevronDown,
+  Clock,
 } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
 
@@ -83,6 +84,7 @@ export default function PortfolioClient() {
         { name: "CSS Modules", category: "Estilos" },
         { name: "Framer Motion", category: "Animaciones" },
         { name: "Material-UI", category: "UI Libraries" },
+        { name: "TanStack Table", category: "UI Libraries" },
         { name: "Shadcn/ui", category: "UI Libraries" },
         { name: "Ant Design", category: "UI Libraries" },
         { name: "Diseño Responsivo", category: "UI/UX" },
@@ -139,6 +141,7 @@ export default function PortfolioClient() {
         { name: "Node.js", category: "Frameworks" },
         { name: "NestJS", category: "Frameworks" },
         { name: "Express.js", category: "Frameworks" },
+        { name: "Django", category: "Frameworks" },
         { name: "Auth0", category: "Autenticación" },
         { name: "Passport.js", category: "Autenticación" },
         { name: "JWT", category: "Autenticación" },
@@ -150,10 +153,18 @@ export default function PortfolioClient() {
       title: "Bases de datos",
       icon: "💾",
       skills: [
-        { name: "PostgreSQL", category: "SQL" },
-        { name: "MongoDB", category: "NoSQL" },
+        { name: "PostgreSQL", category: "Bases de datos" },
+        { name: "MongoDB", category: "Bases de datos" },
         { name: "Prisma", category: "ORMs" },
         { name: "Mongoose", category: "ORMs" },
+        { name: "Sequelize", category: "ORMs" },
+        { name: "TypeORM", category: "ORMs" },
+        { name: "Supabase", category: "Bases de datos" },
+        { name: "Firebase", category: "Bases de datos" },
+        { name: "MySQL", category: "Bases de datos" },
+        { name: "Oracle", category: "Bases de datos" },
+        { name: "SQL Server", category: "Bases de datos" },
+        { name: "SQLite", category: "Bases de datos" },
       ],
     },
     devops: {
@@ -207,6 +218,11 @@ export default function PortfolioClient() {
         { name: "Orientación a resultados", category: "Estratégica" },
         { name: "Proactividad", category: "Personal" },
         { name: "Trabajo en equipo", category: "Interpersonal" },
+        { name: "Disciplina", category: "Personal" },
+        { name: "Aprendizaje continuo", category: "Personal" },
+        { name: "Autodidacta", category: "Personal" },
+        { name: "Resolución bajo presión", category: "Personal" },
+        { name: "Empatía y escucha activa", category: "Interpersonal" },
       ],
     },
   };
@@ -231,9 +247,10 @@ export default function PortfolioClient() {
         "Panel de administración intuitivo",
         "Optimización SEO avanzada",
       ],
-      image: "/placeholder.svg?height=400&width=600",
+      image: "https://i.imgur.com/DvQHawt.png",
+      repoUrl: "https://github.com/EzequielDiaz1/mrhappy-ecommerce",
       type: "E-Commerce",
-      urlDemo: "https://mr-happy-e-commerce.vercel.app/",
+      demoUrl: "https://mrhappy-ecommerce-mmy8.vercel.app/",
     },
     {
       title: "Paddel-Club Manager",
@@ -254,23 +271,30 @@ export default function PortfolioClient() {
         "Integración de pagos y notificaciones",
         "MVP completo listo para escalar",
       ],
-      image: "/placeholder.svg?height=400&width=600",
+      image: "https://i.imgur.com/1ejk9Dg.png",
+      repoUrl: "https://github.com/EzequielDiaz1/paddel-club-manager",
       type: "SaaS Platform",
+      demoUrl: "https://mr-happy-e-commerce.vercel.app/",
     },
   ];
 
   const experience = [
     {
       company: "Mitrol",
-      position: "Front-end Developer Ssr",
-      period: "enero 2023 - Actualidad",
+      position: "Front-end Developer Ssr.",
+      period: "Enero 2023 - Actualidad",
+      location: "Buenos Aires, Argentina (remoto)",
       duration: `${(() => {
         const start = new Date(2023, 0); // enero 2023
         const now = new Date();
-        const diffMonths = (now.getFullYear() - start.getFullYear()) * 12 + (now.getMonth() - start.getMonth());
+        const diffMonths =
+          (now.getFullYear() - start.getFullYear()) * 12 +
+          (now.getMonth() - start.getMonth());
         const years = Math.floor(diffMonths / 12);
         const months = diffMonths % 12;
-        return `${years ? `${years} año${years > 1 ? 's' : ''} ` : ''}${months ? `${months} mes${months > 1 ? 'es' : ''}` : ''}`.trim();
+        return `${years ? `${years} año${years > 1 ? "s" : ""} ` : ""}${
+          months ? `${months} mes${months > 1 ? "es" : ""}` : ""
+        }`.trim();
       })()}`,
       description:
         "Desarrollo de interfaces modernas y eficientes para productos core utilizados en centros de contacto. Trabajo como parte del equipo responsable del front-end de aplicaciones críticas dentro del ecosistema Mitrol, enfocándome en la creación de soluciones escalables y de alto rendimiento. Utilizo tecnologías como React, Next.js y TypeScript para diseñar experiencias de usuario intuitivas, manteniendo buenas prácticas de accesibilidad, rendimiento y mantenibilidad del código. Colaboro estrechamente con diseñadores, product owners y equipos de back-end para implementar funcionalidades clave que impactan directamente en la operación diaria de empresas que gestionan grandes volúmenes de atención al cliente.",
@@ -281,14 +305,15 @@ export default function PortfolioClient() {
         "TailwindCSS",
         "Material-UI",
         "Framer Motion",
+        "WebRTC",
       ],
     },
     {
       company: "Soho",
-      position: "Full Stack Developer",
-      period: "marzo 2022 - octubre 2022",
+      position: "Full Stack Developer Jr.",
+      period: "Marzo 2022 - Noviembre 2022",
       duration: "8 meses",
-      location: "Santiago, Chile",
+      location: "Santiago, Chile (remoto)",
       description:
         "Desarrollo full-stack de aplicaciones web escalables utilizando tecnologías modernas. Participé en la arquitectura de soluciones, implementación de APIs REST y creación de interfaces de usuario responsivas con enfoque en la experiencia del usuario.",
       tech: [
@@ -302,8 +327,8 @@ export default function PortfolioClient() {
     },
     {
       company: "ROSS Outside the Box",
-      position: "Full Stack Developer",
-      period: "septiembre 2020 - marzo 2022",
+      position: "Full Stack Developer Trainee",
+      period: "Septiembre 2020 - Marzo 2022",
       duration: "1 año 7 meses",
       location: "Córdoba, Argentina",
       description:
@@ -350,7 +375,12 @@ export default function PortfolioClient() {
               Front-End Developer con pasión por crear interfaces excepcionales
               y experiencias de usuario memorables. Especializado en React,
               Next.js y TypeScript, con sólidos conocimientos en back-end y
-              arquitectura full-stack. <span className="block mt-2">Actualmente trabajo full time, pero también realizo proyectos freelance para clientes que buscan soluciones modernas y personalizadas.</span>
+              arquitectura full-stack.{" "}
+              <span className="block mt-2">
+                Actualmente trabajo full time, pero también realizo proyectos
+                freelance para clientes que buscan soluciones modernas y
+                personalizadas.
+              </span>
             </p>
           </motion.div>
 
@@ -446,7 +476,10 @@ export default function PortfolioClient() {
       </section>
 
       {/* Skills Section */}
-      <SkillsSection skillsData={skillsData} scrollToSection={scrollToSection} />
+      <SkillsSection
+        skillsData={skillsData}
+        scrollToSection={scrollToSection}
+      />
 
       {/* Projects Section */}
       <ProjectsSection projects={projects} scrollToSection={scrollToSection} />
@@ -489,17 +522,18 @@ export default function PortfolioClient() {
                           {exp.company}
                         </CardDescription>
                       </div>
-                      <div className="text-right">
+                      <div className="text-left">
                         <div className="flex items-center text-gray-300 mb-1">
-                          <Calendar className="h-4 w-4 mr-2" />
+                          <Calendar className="h-4 w-4 mr-1" />
                           {exp.period}
                         </div>
-                        <div className="text-sm text-gray-400">
+                        <div className="flex items-center text-gray-400 text-sm mt-1">
+                          <Clock className="h-4 w-4 mr-1" />
                           {exp.duration}
                         </div>
                         {exp.location && (
                           <div className="flex items-center text-gray-400 text-sm mt-1">
-                            <MapPin className="h-3 w-3 mr-1" />
+                            <MapPin className="h-3 w-3 mr-2" />
                             {exp.location}
                           </div>
                         )}
