@@ -84,7 +84,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToSection, y, opacity }
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.8 }}
-        className="flex flex-nowrap justify-center gap-4 mb-8 py-2"
+        className="flex flex-col md:flex-row flex-nowrap justify-center gap-4 mb-8 py-2"
       >
         <Button
           className="w-48 min-w-[180px] cursor-pointer flex items-center justify-center gap-2 bg-cyan-600 hover:bg-cyan-700 text-white text-lg font-semibold shadow-lg transition-all duration-300"
