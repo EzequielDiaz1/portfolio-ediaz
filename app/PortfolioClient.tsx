@@ -233,6 +233,7 @@ export default function PortfolioClient() {
       ],
       image: "/placeholder.svg?height=400&width=600",
       type: "E-Commerce",
+      urlDemo: "https://mr-happy-e-commerce.vercel.app/",
     },
     {
       title: "Paddel-Club Manager",
