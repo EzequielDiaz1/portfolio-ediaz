@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Mail, ArrowDown, ChevronDown } from "lucide-react";
+import { Mail, ChevronDown, User, Brain, FolderKanban, Briefcase } from "lucide-react";
 import React from "react";
 import type { MotionValue } from "framer-motion";
 import { Typewriter } from 'react-simple-typewriter';
@@ -24,17 +24,22 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToSection, y, opacity }
     <div className="absolute inset-0">
       <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
       <motion.div
-        animate={{ scale: [1, 1.2, 1], rotate: [0, 180, 360] }}
-        transition={{ duration: 20, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
-        className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 rounded-full blur-3xl"
+        animate={{ scale: [1, 1.4, 1], rotate: [0, 180, 360] }}
+        transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
+        className="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] bg-gradient-to-r from-cyan-400/40 to-blue-500/40 rounded-full blur-[120px] opacity-80"
       />
       <motion.div
-        animate={{ scale: [1.2, 1, 1.2], rotate: [360, 180, 0] }}
-        transition={{ duration: 15, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
-        className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/30 to-pink-500/30 rounded-full blur-3xl"
+        animate={{ scale: [1.3, 1, 1.3], rotate: [360, 180, 0] }}
+        transition={{ duration: 10, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
+        className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-gradient-to-r from-purple-500/40 to-pink-500/40 rounded-full blur-[120px] opacity-80"
+      />
+      <motion.div
+        animate={{ scale: [1, 1.2, 1], x: [0, 60, -60, 0], y: [0, -40, 40, 0] }}
+        transition={{ duration: 12, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+        className="absolute top-1/2 left-1/2 w-[400px] h-[400px] bg-gradient-to-br from-yellow-400/30 to-pink-400/30 rounded-full blur-[100px] opacity-70 -translate-x-1/2 -translate-y-1/2"
       />
     </div>
-    <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+    <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
       <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="mb-8">
         <div className="relative w-36 h-36 mx-auto mb-8 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 p-1 flex items-center justify-center">
           <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center overflow-hidden">
@@ -75,9 +80,62 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToSection, y, opacity }
       <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.6 }} className="flex flex-wrap justify-center gap-4 mb-12">
         <Badge variant="secondary" className="text-lg px-4 py-2 bg-cyan-500/20 text-cyan-300 border-cyan-500/30">4+ años experiencia</Badge>
       </motion.div>
-      <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.8 }} className="flex flex-wrap justify-center gap-4">
-        <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600" aria-label="Contactar a Ezequiel Diaz" onClick={() => scrollToSection("contact")}> <Mail className="mr-2 h-5 w-5" /> Contactar </Button>
-        <Button size="lg" variant="outline" className="border-purple-500/50 text-purple-300 hover:bg-purple-500/10" aria-label="Ver proyectos" onClick={() => scrollToSection("projects")}> <ArrowDown className="mr-2 h-5 w-5" /> Ver proyectos </Button>
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.8 }}
+        className="flex flex-nowrap justify-center gap-4 mb-8 py-2"
+      >
+        <Button
+          className="w-48 min-w-[180px] cursor-pointer flex items-center justify-center gap-2 bg-cyan-600 hover:bg-cyan-700 text-white text-lg font-semibold shadow-lg transition-all duration-300"
+          aria-label="Ir a Sobre mí"
+          onClick={() => scrollToSection("about")}
+          asChild
+        >
+          <motion.span whileTap={{ scale: 0.95 }} className="flex items-center gap-2 w-full justify-center">
+            <User className="h-5 w-5" /> Sobre mí
+          </motion.span>
+        </Button>
+        <Button
+          className="w-48 min-w-[180px]  cursor-pointer  flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 text-white text-lg font-semibold shadow-lg transition-all duration-300"
+          aria-label="Ir a Skills"
+          onClick={() => scrollToSection("skills")}
+          asChild
+        >
+          <motion.span whileTap={{ scale: 0.95 }} className="flex items-center gap-2 w-full justify-center">
+            <Brain className="h-5 w-5" /> Skills
+          </motion.span>
+        </Button>
+        <Button
+          className="w-48 min-w-[180px] cursor-pointer flex items-center justify-center gap-2 bg-pink-600 hover:bg-pink-700 text-white text-lg font-semibold shadow-lg transition-all duration-300"
+          aria-label="Ir a Proyectos"
+          onClick={() => scrollToSection("projects")}
+          asChild
+        >
+          <motion.span whileTap={{ scale: 0.95 }} className="flex items-center gap-2 w-full justify-center">
+            <FolderKanban className="h-5 w-5" /> Proyectos
+          </motion.span>
+        </Button>
+        <Button
+          className="w-48 min-w-[180px] cursor-pointer flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white text-lg font-semibold shadow-lg transition-all duration-300"
+          aria-label="Ir a Experiencia"
+          onClick={() => scrollToSection("experience")}
+          asChild
+        >
+          <motion.span whileTap={{ scale: 0.95 }} className="flex items-center gap-2 w-full justify-center">
+            <Briefcase className="h-5 w-5" /> Experiencia
+          </motion.span>
+        </Button>
+        <Button
+          className="w-48 min-w-[180px] cursor-pointer flex items-center justify-center gap-2 bg-fuchsia-600 hover:bg-fuchsia-700 text-white text-lg font-semibold shadow-lg transition-all duration-300"
+          aria-label="Ir a Contacto"
+          onClick={() => scrollToSection("contact")}
+          asChild
+        >
+          <motion.span whileTap={{ scale: 0.95 }} className="flex items-center gap-2 w-full justify-center">
+            <Mail className="h-5 w-5" /> Contacto
+          </motion.span>
+        </Button>
       </motion.div>
     </div>
     <motion.button onClick={() => scrollToSection("about")} className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-gray-400 hover:text-cyan-400 transition-colors duration-300" whileHover={{ y: 5 }} animate={{ y: [0, 5, 0] }} transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }} aria-label="Ir a la siguiente sección">

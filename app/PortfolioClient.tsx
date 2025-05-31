@@ -26,6 +26,7 @@ import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import SkillsSection from "@/components/SkillsSection";
 import ProjectsSection from "@/components/ProjectsSection";
+import SidebarIndex from "@/components/SidebarIndex";
 
 export default function PortfolioClient() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -38,10 +39,12 @@ export default function PortfolioClient() {
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [showSidebar, setShowSidebar] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 400);
+      setShowSidebar(window.scrollY > 400 && window.innerWidth >= 1024);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -259,10 +262,17 @@ export default function PortfolioClient() {
     {
       company: "Mitrol",
       position: "Front-end Developer Ssr",
-      period: "enero 2023 - Present",
-      duration: "2 años 5 meses",
+      period: "enero 2023 - Actualidad",
+      duration: `${(() => {
+        const start = new Date(2023, 0); // enero 2023
+        const now = new Date();
+        const diffMonths = (now.getFullYear() - start.getFullYear()) * 12 + (now.getMonth() - start.getMonth());
+        const years = Math.floor(diffMonths / 12);
+        const months = diffMonths % 12;
+        return `${years ? `${years} año${years > 1 ? 's' : ''} ` : ''}${months ? `${months} mes${months > 1 ? 'es' : ''}` : ''}`.trim();
+      })()}`,
       description:
-        "Desarrollo de interfaces modernas para productos core utilizados por empresas de centros de contacto. Trabajo con React, Next.js, TypeScript y metodologías ágiles.",
+        "Desarrollo de interfaces modernas y eficientes para productos core utilizados en centros de contacto. Trabajo como parte del equipo responsable del front-end de aplicaciones críticas dentro del ecosistema Mitrol, enfocándome en la creación de soluciones escalables y de alto rendimiento. Utilizo tecnologías como React, Next.js y TypeScript para diseñar experiencias de usuario intuitivas, manteniendo buenas prácticas de accesibilidad, rendimiento y mantenibilidad del código. Colaboro estrechamente con diseñadores, product owners y equipos de back-end para implementar funcionalidades clave que impactan directamente en la operación diaria de empresas que gestionan grandes volúmenes de atención al cliente.",
       tech: [
         "React",
         "Next.js",
@@ -315,6 +325,7 @@ export default function PortfolioClient() {
       ref={containerRef}
       className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
     >
+      {showSidebar && <SidebarIndex />}
       <HeroSection scrollToSection={scrollToSection} y={y} opacity={opacity} />
       <AboutSection scrollToSection={scrollToSection} />
 
