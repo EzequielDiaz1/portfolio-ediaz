@@ -632,6 +632,7 @@ export default function PortfolioClient() {
                 size="lg"
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600"
                 aria-label="Enviar un correo electrónico a Ezequiel Diaz"
+                onClick={() => window.open("mailto:ezequiel.diaz1337@gmail.com", "_blank")}
               >
                 <Mail className="mr-2 h-5 w-5" />
                 Enviar email
@@ -641,6 +642,7 @@ export default function PortfolioClient() {
                 variant="outline"
                 className="border-purple-500/50 text-purple-300 hover:bg-purple-500/10"
                 aria-label="Visitar el perfil de LinkedIn de Ezequiel Diaz"
+                onClick={() => window.open("https://www.linkedin.com/in/ezequiel-diaz-4b6b0b199/", "_blank")}
               >
                 <Linkedin className="mr-2 h-5 w-5" />
                 LinkedIn
@@ -650,6 +652,7 @@ export default function PortfolioClient() {
                 variant="outline"
                 className="border-gray-500/50 text-gray-300 hover:bg-gray-500/10"
                 aria-label="Visitar el perfil de GitHub de Ezequiel Diaz"
+                onClick={() => window.open("https://github.com/ezequieldiaz1", "_blank")}
               >
                 <Github className="mr-2 h-5 w-5" />
                 GitHub
