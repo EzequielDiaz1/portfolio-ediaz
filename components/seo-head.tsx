@@ -9,8 +9,8 @@ interface SEOHeadProps {
 }
 
 export default function SEOHead({
-  title = "Ezequiel Diaz - Full Stack Developer",
-  description = "Full Stack Developer con 2+ años de experiencia en React, Next.js, TypeScript y Node.js",
+  title = "Ezequiel Diaz - Front-end Developer",
+  description = "Front-end Developer con 4+ años de experiencia en React, Next.js, TypeScript y Node.js",
   image = "/og-image.jpg",
   url = "https://ezequieldiaz.dev",
   type = "website",

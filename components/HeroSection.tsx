@@ -59,7 +59,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToSection, y, opacity }
             words={['Ezequiel Diaz']}
             loop={1}
             cursor
-            cursorStyle="_"
             typeSpeed={80}
             deleteSpeed={50}
             delaySpeed={1000}
