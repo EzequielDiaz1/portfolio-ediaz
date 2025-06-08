@@ -353,7 +353,6 @@ export default function PortfolioClient() {
     >
       {showSidebar && <SidebarIndex />}
       <HeroSection scrollToSection={scrollToSection} y={y} opacity={opacity} />
-      <AboutSection scrollToSection={scrollToSection} />
 
       {/* About Section */}
       <section id="about" className="py-20 px-4 bg-slate-800/50">
