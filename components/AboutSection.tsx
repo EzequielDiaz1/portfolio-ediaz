@@ -23,7 +23,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ scrollToSection }) => (
           <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">mí</span>
         </h2>
         <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          Front-End Developer con pasión por crear interfaces excepcionales y experiencias de usuario memorables. Especializado en React, Next.js y TypeScript, con sólidos conocimientos en back-end y arquitectura full-stack. <span className="block mt-2">Actualmente trabajo full time, pero también realizo proyectos freelance para clientes que buscan soluciones modernas y personalizadas.</span>
+          Full-Stack Developer con pasión por crear interfaces excepcionales y experiencias de usuario memorables. Especializado en React, Next.js y TypeScript, con sólidos conocimientos en back-end y arquitectura full-stack. <span className="block mt-2">Actualmente trabajo full time, pero también realizo proyectos freelance para clientes que buscan soluciones modernas y personalizadas.</span>
         </p>
       </motion.div>
       <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -39,10 +39,10 @@ const AboutSection: React.FC<AboutSectionProps> = ({ scrollToSection }) => (
               Desde los 16 años he trabajado en diversos roles que fortalecieron mi capacidad de organización, responsabilidad y resolución de problemas. Estas experiencias, junto con mi pasión por el handball, me enseñaron la importancia del trabajo en equipo y la comunicación efectiva.
             </p>
             <p>
-              Mi transición a la tecnología fue natural, especializándome principalmente en desarrollo front-end. Me apasiona crear interfaces intuitivas y experiencias de usuario excepcionales, aunque también tengo sólidos conocimientos en back-end, bases de datos e infraestructura que me permiten tener una visión completa del desarrollo web.
+              Mi transición a la tecnología fue natural, especializándome principalmente en desarrollo Full-Stack. Me apasiona crear interfaces intuitivas y experiencias de usuario excepcionales, aunque también tengo sólidos conocimientos en back-end, bases de datos e infraestructura que me permiten tener una visión completa del desarrollo web.
             </p>
             <p>
-              Como Front-End Developer, disfruto transformando diseños en código, optimizando performance y creando animaciones que deleiten a los usuarios. Mi enfoque está en la calidad del código, la accesibilidad y las mejores prácticas de desarrollo moderno.
+              Como Full-Stack Developer, disfruto transformando diseños en código, optimizando performance y creando animaciones que deleiten a los usuarios. Mi enfoque está en la calidad del código, la accesibilidad y las mejores prácticas de desarrollo moderno.
             </p>
           </div>
         </motion.div>

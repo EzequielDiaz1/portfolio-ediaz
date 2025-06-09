@@ -14,8 +14,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Ezequiel Diaz - Front-end Developer",
-  description: "Portfolio de Ezequiel Diaz, Front-end Developer especializado en React, Next.js y experiencia en backend.",
+  title: "Ezequiel Diaz - Full-Stack Developer",
+  description: "Portfolio de Ezequiel Diaz, Full-Stack Developer especializado en React, Next.js y experiencia en backend.",
 };
 
 export default function RootLayout({

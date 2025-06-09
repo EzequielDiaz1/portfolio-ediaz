@@ -32,7 +32,7 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ skillsData, scrollToSecti
           <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">skills</span>
         </h2>
         <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-          +4 años especializándome en desarrollo front-end con tecnologías modernas
+          +4 años especializándome en desarrollo Full-Stack con tecnologías modernas
         </p>
       </motion.div>
       <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-6">

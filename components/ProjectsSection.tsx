@@ -40,7 +40,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ projects, scrollToSec
           </span>
         </h2>
         <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-          Algunos de mis trabajos más importantes que demuestran mi experiencia en desarrollo front-end y full-stack
+          Algunos de mis trabajos más importantes que demuestran mi experiencia en desarrollo Full-Stack y full-stack
         </p>
       </motion.div>
       <div className="space-y-20">

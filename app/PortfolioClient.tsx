@@ -71,7 +71,7 @@ export default function PortfolioClient() {
 
   const skillsData = {
     frontend: {
-      title: "Front-End",
+      title: "Full-Stack",
       icon: "🎨",
       skills: [
         { name: "TypeScript", category: "Lenguajes" },
@@ -280,7 +280,7 @@ export default function PortfolioClient() {
   const experience = [
     {
       company: "Mitrol",
-      position: "Front-end Developer Ssr.",
+      position: "Full-Stack Developer Ssr.",
       period: "Enero 2023 - Actualidad",
       location: "Buenos Aires, Argentina (remoto)",
       duration: `${(() => {
@@ -296,7 +296,7 @@ export default function PortfolioClient() {
         }`.trim();
       })()}`,
       description:
-        "Desarrollo de interfaces modernas y eficientes para productos core utilizados en centros de contacto. Trabajo como parte del equipo responsable del front-end de aplicaciones críticas dentro del ecosistema Mitrol, enfocándome en la creación de soluciones escalables y de alto rendimiento. Utilizo tecnologías como React, Next.js y TypeScript para diseñar experiencias de usuario intuitivas, manteniendo buenas prácticas de accesibilidad, rendimiento y mantenibilidad del código. Colaboro estrechamente con diseñadores, product owners y equipos de back-end para implementar funcionalidades clave que impactan directamente en la operación diaria de empresas que gestionan grandes volúmenes de atención al cliente.",
+        "Desarrollo de interfaces modernas y eficientes para productos core utilizados en centros de contacto. Trabajo como parte del equipo responsable del Full-Stack de aplicaciones críticas dentro del ecosistema Mitrol, enfocándome en la creación de soluciones escalables y de alto rendimiento. Utilizo tecnologías como React, Next.js y TypeScript para diseñar experiencias de usuario intuitivas, manteniendo buenas prácticas de accesibilidad, rendimiento y mantenibilidad del código. Colaboro estrechamente con diseñadores, product owners y equipos de back-end para implementar funcionalidades clave que impactan directamente en la operación diaria de empresas que gestionan grandes volúmenes de atención al cliente.",
       tech: [
         "React",
         "Next.js",
@@ -370,7 +370,7 @@ export default function PortfolioClient() {
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Front-End Developer con pasión por crear interfaces excepcionales
+              Full-Stack Developer con pasión por crear interfaces excepcionales
               y experiencias de usuario memorables. Especializado en React,
               Next.js y TypeScript, con sólidos conocimientos en back-end y
               arquitectura full-stack.{" "}
@@ -402,14 +402,14 @@ export default function PortfolioClient() {
                 </p>
                 <p>
                   Mi transición a la tecnología fue natural, especializándome
-                  principalmente en desarrollo front-end. Me apasiona crear
+                  principalmente en desarrollo Full-Stack. Me apasiona crear
                   interfaces intuitivas y experiencias de usuario excepcionales,
                   aunque también tengo sólidos conocimientos en back-end, bases
                   de datos e infraestructura que me permiten tener una visión
                   completa del desarrollo web.
                 </p>
                 <p>
-                  Como Front-End Developer, disfruto transformando diseños en
+                  Como Full-Stack Developer, disfruto transformando diseños en
                   código, optimizando performance y creando animaciones que
                   deleiten a los usuarios. Mi enfoque está en la calidad del
                   código, la accesibilidad y las mejores prácticas de desarrollo
