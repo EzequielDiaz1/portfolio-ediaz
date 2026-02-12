@@ -14,8 +14,17 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Ezequiel Diaz - Full-Stack Developer",
-  description: "Portfolio de Ezequiel Diaz, Full-Stack Developer especializado en React, Next.js y experiencia en backend.",
+  title: "Ezequiel Diaz — Full-Stack Developer",
+  description:
+    "Portfolio cinematográfico de Ezequiel Diaz. Full-Stack Developer con +4 años de experiencia en React, Next.js, TypeScript y Node.js.",
+  keywords:
+    "Ezequiel Diaz, Full Stack Developer, React, Next.js, TypeScript, Node.js, Portfolio, Córdoba Argentina",
+  openGraph: {
+    title: "Ezequiel Diaz — Full-Stack Developer",
+    description:
+      "Una experiencia cinematográfica interactiva sobre mi carrera como desarrollador.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -29,7 +38,7 @@ export default function RootLayout({
         <link rel="icon" href="/app/favicon.ico" type="image/x-icon" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#0a0a0a] text-white`}
       >
         {children}
       </body>
